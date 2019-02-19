@@ -2,15 +2,16 @@
 
 # Now for the 53 different patterns, all converted in FoxDot language
 
-# There is 53 different patterns. I start with p but have only two characters for naming players, consequently here is my enumerating :
+# There is 53 different patterns. I start with p but have only two characters for naming players, consequently here is my enum :
 '''
-1 = p1
-10 = q0
-11 = q1
-20 = r0
-30 = s0
-40 = t0
-50 = u0
+1 becomes p1
+10 becomes q0
+11 becomes q1
+20 becomes r0
+30 becomes s0
+40 becomes t0
+50 becomes u0
+and so on
 '''
 
 # The score does not mention any time signature nor tempo so I'll consider we're set like this, feel free to change whatever :
