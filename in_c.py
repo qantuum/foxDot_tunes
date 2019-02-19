@@ -2,7 +2,7 @@
 
 # Now for the 53 different patterns, all converted in FoxDot language
 
-# There is 53 different patterns. I start with p but have only two character, consequently here is my enumerating :
+# There is 53 different patterns. I start with p but have only two characters for naming players, consequently here is my enumerating :
 '''
 1 = p1
 10 = q0
@@ -13,7 +13,7 @@
 50 = u0
 '''
 
-# The score does not mention any time signature nor tempo so I'll consider we're set like this:
+# The score does not mention any time signature nor tempo so I'll consider we're set like this, feel free to change whatever :
 Clock.bpm = 120
 Clock.meter = (4,4)
 
@@ -22,10 +22,8 @@ Root.default.set(0)
 Scale.default.set("major")
 
 # Pattern list :
-# First I'm gonna provide you some random player
-p0 >> charm()
 
-# Just do same with every player, then you can extract degrees and durations from these
+# I'm just listing the needed player properties
 p1.degree = 0
 p1.dur = 1
 p1.oct = (5,6)
