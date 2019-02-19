@@ -2,7 +2,7 @@
 
 # Now for the 53 different patterns, all converted in FoxDot language
 
-# There is 53 different patterns. I start with p but have only two characters for naming players, consequently here is my enum :
+# There is 53 different patterns. I have only two characters with letter first for naming players, consequently here is my enum :
 '''
 1 becomes p1
 10 becomes q0
