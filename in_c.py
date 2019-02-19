@@ -8,3 +8,73 @@ Root.default.set(0)
 Scale.default.set("major")
 
 # Pattern list :
+# First I'm gonna provide you some random player
+p0 >> charm()
+
+# Just do same with every player, then you can extract degrees and durations from these
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
+p1.degree = 
+p1.dur = 
+
