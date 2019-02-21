@@ -35,6 +35,30 @@ def DurShaperSm(target):
     list.append(target-sum(list))                   
     return list # always return a list of durations with total duration equals target
 
+# a variation with somewhat more score-like results
+def DurShaperSc(target):
+    from random import randint
+    sr = random.SystemRandom()
+    indexes = random.randint(1,target+4)
+    dividers = [1,1,2] # 1/4 and 1/8-typed notes get more scarce
+    list=[]
+    for i in range(0,indexes):
+        if target%2 == 0:
+            a = random.randint(1,target/2)/sr.choice(dividers)
+        else:
+            a = random.randint(1,(target-1)/2)/sr.choice(dividers)
+        if sum(list)+a < target/4:
+            list.append(a)
+        if sum(list)+a/2 < target/2:
+            list.append(a/2)
+        if sum(list)+a < target:
+            list.append(a)
+        if sum(list)+a/4 < target:
+            list.append(a/4)
+    if sum(list) < target:
+        list.append(target-sum(list))                   
+    return list # always return a list of durations with total duration equals target
+
 # test it !
 a = DurShaper(8)
 b = DurShaperSm(4)
