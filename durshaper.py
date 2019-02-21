@@ -16,9 +16,9 @@ def DurShaper(target):
 
 # test it !
 a = DurShaper(8)
-b = DurShaper(12)
+b = DurShaper(4)
 print(a,b)
-Scale.default.set("minor")
-aa >> pluck(P[0,3,4,0,2,1,0,5,6,0,7,8,0,4,0,3].every(8,"shuffle"),dur=Pvar([a,b,PDur(3,8)],[8,4,4]))
+Scale.default.set("minorPentatonic")
+aa >> pluck(P[[0,3,4],[0,2,1],[0,5,6],[0,7,8],[0,4],[0,3]].every(8,"shuffle"),dur=Pvar([a,b,PDur(3,8)],[8,4,4]))
 ab >> zap(ss.degree[1] + P[3,5], dur=PDur(5,8),drive=0.05)
 ac >> prophet(ss.degree[0] + P(0,3,5),dur=4, oct=(5,5,4))
