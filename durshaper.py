@@ -8,7 +8,7 @@ def DurShaper(target):
         if target%2 == 0:
             a = random.randint(1,target/2)/sr.choice(dividers)
         else:
-            a = random.randint(1,(target+1)/2)/sr.choice(dividers)
+            a = random.randint(1,(target-1)/2)/sr.choice(dividers)
         if sum(list)+a < target:
             list.append(a)
     list.append(target-sum(list))                   
