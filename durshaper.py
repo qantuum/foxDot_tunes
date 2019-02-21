@@ -41,13 +41,14 @@ def DurShaperSc(target):
     sr = random.SystemRandom()
     indexes = random.randint(1,target+4)
     standards = [0.25,0.375,0.75,0.5,1,2,3,4] # standard dur values found in scores
-    dividers = [1,1,2] # skip 1/4 and 1/8 (comes after)
+    dividers = [1,1,1,2] # skip 1/4 and 1/8 (comes after) - fully customizable
     list=[]
     for i in range(0,indexes):
         if target%2 == 0:
             a = random.randint(1,target/2)/sr.choice(dividers)
         else:
             a = random.randint(1,(target-1)/2)/sr.choice(dividers)
+        # conditions are fully customizable as well if you want to raise or reduce the occurence of getting low durations
         if sum(list)+a < target/4:
             list.append(a)
         if sum(list)+a/2 < target/2:
@@ -56,7 +57,9 @@ def DurShaperSc(target):
             list.append(a)
         if sum(list)+a/4 < target:
             list.append(a/4)
+    # this stands for the last numbers remaining to sum up to target total duration
     if sum(list) < target:
+        # so we close the chapter with taking special care about our durations being standard
         for i in range(0,len(standards)):
             if target-sum(list)%standards[i] != 0 and standards[i] < target-sum(list):
                 list.append(standards[i])
@@ -64,7 +67,8 @@ def DurShaperSc(target):
             list.append(target-sum(list))                                 
     return [P[list].shuffle(),len(list)] # always return a list of durations with total duration equals target
 
-# I tried to implement rests in this but to no avail. To use a rest, the best available option would be to trigger a cut on the target note
+# I tried to implement rests in this but to no avail.
+# To use a rest, the best available option would be to trigger a cut on the target note
 
 # test it !
 a = DurShaper(8)
