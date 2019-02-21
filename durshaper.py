@@ -64,6 +64,8 @@ def DurShaperSc(target):
             list.append(target-sum(list))                                 
     return [P[list].shuffle(),len(list)] # always return a list of durations with total duration equals target
 
+# I tried to implement rests in this but to no avail. To use a rest, the best available option would be to trigger a cut on the target note
+
 # test it !
 a = DurShaper(8)
 b = DurShaperSm(4)
