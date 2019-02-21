@@ -56,7 +56,12 @@ def DurShaperSc(target):
         if sum(list)+a/4 < target:
             list.append(a/4)
     if sum(list) < target:
-        list.append(target-sum(list))                   
+        standards = [0.25,0.375,0.75,0.5,1,2,3,4] # standard dur values found in scores
+        for i in range(0,len(standards)):
+            if target-sum(list)%standards[i] != 0 and standards[i] < target-sum(list):
+                list.append(standards[i])
+        if sum(list) < target:
+            list.append(target-sum(list))                                  
     return list # always return a list of durations with total duration equals target
 
 # test it !
