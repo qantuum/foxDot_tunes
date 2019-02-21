@@ -9,6 +9,8 @@ def DurShaper(target):
             a = random.randint(1,target/2)/sr.choice(dividers)
         else:
             a = random.randint(1,(target-1)/2)/sr.choice(dividers)
+        if sum(list)+a < target/2:
+            list.append(a)
         if sum(list)+a < target:
             list.append(a)
     list.append(target-sum(list))                   
@@ -28,7 +30,7 @@ def DurShaperSm(target):
             a = random.randint(1,(target-1)/2)/sr.choice(dividers)
         if sum(list)+a < target/2:
             list.append(a)
-        if sum(list)+a < target:
+        if sum(list)+a/2 < target:
             list.append(a/2)
     list.append(target-sum(list))                   
     return list # always return a list of durations with total duration equals target
