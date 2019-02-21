@@ -40,7 +40,7 @@ def DurShaperSc(target):
     from random import randint
     sr = random.SystemRandom()
     indexes = random.randint(1,target+4)
-    dividers = [1,1,2] # 1/4 and 1/8-typed notes get more scarce
+    dividers = [1,1,2] # skip 1/4 and 1/8 (comes after)
     list=[]
     for i in range(0,indexes):
         if target%2 == 0:
