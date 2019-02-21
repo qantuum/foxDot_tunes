@@ -65,21 +65,21 @@ def DurShaperSc(target):
     return [P[list].shuffle(),len(list)] # always return a list of durations with total duration equals target
 
 # test it !
-a = DurShaper(8)[0]
-b = DurShaperSm(4)[0]
-print(a,b)
+a = DurShaper(8)
+b = DurShaperSm(4)
+print(a[0],b[0])
 Scale.default.set("minorPentatonic")
-aa >> pluck(P[[0,3,4],[0,2,1],[0,5,6],[0,7,8],[0,4],[0,3]].every(8,"shuffle"),dur=Pvar([a,b,PDur(3,8)],[8,4,4]))
+aa >> pluck(P[[0,3,4],[0,2,1],[0,5,6],[0,7,8],[0,4],[0,3]].every(8,"shuffle"),dur=Pvar([a[0],b[0],PDur(3,8)],[8,4,4]))
 ab >> zap(aa.degree[1] + P[3,5], dur=PDur(5,8),drive=0.05)
 ac >> prophet(aa.degree[0] + P(0,3,5),dur=4, oct=(5,5,4))
 op >> play("<x o ><->")
 
 # another example of setup using pattern methods :
-a = DurShaperSc(4)[0]
-print(a)
+a = DurShaperSc(4)
+print(a[0])
 Scale.default.set("mixolydian")
 Root.default.set(-3)
-aa >> pluck(PRand(5),dur= a | a.every(6,"rotate",3) )    
+aa >> pluck(PRand(5),dur= a[0] | a[0].every(6,"rotate",3) )    
 ab >> zap(aa.degree[1] + P[3,5], dur=1/2,drive=0.05)
 ac >> keys(aa.degree[0] + P(0,3,7),dur=2, oct=(6,5,5),formant=0.03)
 op >> play("<x o ><->")
