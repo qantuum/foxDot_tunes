@@ -43,6 +43,14 @@ Scale.default.set("minorPentatonic")
 aa >> pluck(P[[0,3,4],[0,2,1],[0,5,6],[0,7,8],[0,4],[0,3]].every(8,"shuffle"),dur=Pvar([a,b,PDur(3,8)],[8,4,4]))
 ab >> zap(ss.degree[1] + P[3,5], dur=PDur(5,8),drive=0.05)
 ac >> prophet(ss.degree[0] + P(0,3,5),dur=4, oct=(5,5,4))
+op >> play("<x o ><->")
 
-# example of setup using pattern methods :
-aa >> pluck(P[0,3],dur = a + (list) (P[a].rotate(var([2,3]))) )
+# another example of setup using pattern methods :
+a = DurShaper(8)
+print(a)
+Scale.default.set("mixolydian")
+Root.default.set(-3)
+aa >> pluck(PRand(5),dur= a + (list) (P[a].rotate(var([2,3],6))) )    
+ab >> zap(ss.degree[1] + P[3,5], dur=1/2,drive=0.05)
+ac >> orient(ss.degree[0] + P(0,3,5),dur=2, oct=(6,5,5),formant=0.03)
+op >> play("<x o ><->")
