@@ -1,7 +1,7 @@
 def DurShaper(target):
     from random import randint
     sr = random.SystemRandom()
-    indexes = random.randint(1,exp*2)
+    indexes = random.randint(1,target*2)
     dividers = [1,2,4,8]
     list=[]
     for i in range(0,indexes):
