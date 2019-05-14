@@ -26,11 +26,11 @@ Scale.default.set("major")
   
 p1.degree = 0
 p1.dur = 1
-p1.oct = (5,6)
+p1.oct = (5,4)
 
 p2.degree = P[0,1,0] 
 p2.dur = P[1/2,1/2,1]
-p2.oct = P[(5,6),6,6]
+p2.oct = P[(5,4),4,4]
 
 p3.degree = P[0,1,0]
 p3.dur = 1/2
@@ -68,5 +68,11 @@ q1.degree =
 q1.dur = 1/4
 q1.oct = 6
 
-p1.degree = 
-p1.dur = 
+q2.degree = P[2,3,5,6]
+q2.dur = P[1/2,1/2,4,1]
+
+q3.degree = P[4,2,2,1,2,15.5,2,2] 
+q3.dur = P[1/4,3/4,1/4,1/4,1/2,rest(3/4),1/4,3]
+
+q4.degree = P[5,4,2,1.5]
+q4.dur = 4
